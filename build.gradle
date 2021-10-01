@@ -1,0 +1,31 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+mainClassName = "test.graalJs.MainKt"
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.graalvm.js/js
+    implementation 'org.graalvm.js:js:21.2.0'
+    // https://mvnrepository.com/artifact/org.graalvm.truffle/truffle-api
+    implementation 'org.graalvm.truffle:truffle-api:21.2.0'
+    // https://mvnrepository.com/artifact/org.graalvm.js/js-scriptengine
+    implementation 'org.graalvm.js:js-scriptengine:21.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
