@@ -40,6 +40,8 @@ fun main() {
             let array = new Uint8Array(10);
             array[9] = 11;
             console.log(array);
+            
+            console.log(`${'$'}{a} is 10`)
         """.trimIndent()
     )
 }
